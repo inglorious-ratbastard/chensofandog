@@ -1,0 +1,68 @@
+<nav class="navbar bg-dark navbar-expand-lg p-3" id="home" style="height: 50px;"> 
+    <div class="container-fluid">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation"> 
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="nav-item">
+      <a class="navbar-brand text-danger me-auto" id="logoclk" href="#frames">Chainsaw Fan</a> 
+      </div> 
+      <div class="collapse navbar-collapse" id="navbarNavDropdown">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link ps-4 me-5" href="#fujimoto">Fujimoto</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link me-5" href="#anime">Anime</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link me-5" href="#manga">Manga</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Pochita's Preferences 
+            </a>
+            <ul class="dropdown-menu bg-dark" style="margin-left: -1px !important; margin-top: 3px; opacity: 0.6; filter: brightness(100%);"> 
+              <li class="nav-item"><a class="dropdown-item" href="#pochita">Pochita's Picks</a></li>
+              <li class="nav-item"><a class="dropdown-item" href="#powerz">Power's Picks</a></li>
+              <li class="nav-item"><a class="dropdown-item" href="#denji">Denji's Picks</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+  
+  <i class="fa fa-md fa-link me-5 text-danger text-nowrap" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="Drag Me Into Your Bookmarks Bar!">
+  <a class='h6 ms-1 text-decoration-none text-danger fw-bold opacity-75' href="/" id="dawg">Chensofandog</a></i>
+  
+  </nav>
+  
+  <style> 
+  .tooltip-inner {
+      max-width: 150px;
+      width: 150px; 
+      background-color: #DFFF00; 
+      color: orange; 
+      font-family: 'Hubballi', cursive;
+      font-weight: bold; 
+  }
+
+.dropdown-menu {
+    background-color: orange !important;
+  } 
+
+.dropdown-menu .nav-item:hover {
+    background-color: #FFD580; 
+    opacity: 0.3;
+    filter: brightness(120%); 
+ }
+  </style> 
+  
+  <script>
+  document.getElementById("logoclk").onclick = function() {
+     document.getElementById("img_frame").style.height = '92vh';
+  };
+  
+  const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
+  const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))
+  </script>
+  
