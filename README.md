@@ -1,5 +1,5 @@
 ### Chensofandog チェンソーマン
-##### *Chainsaw Man* Anime & Manga Fan Site
+![B-Spike](https://cdn.lazyshop.com/files/43cd1f6e-5b7c-4995-8761-3060ac881200/product/33aef27c7d215f917afafa5ca79bd255.jpg)<br>
 ##### Node/ExpressJS Web Application <br> Deployed on [Render](https://render.com/) Cloud Hosting Services
 ___
 #### [Chensofandog](https://chensofandog.onrender.com/)
@@ -12,13 +12,12 @@ ___
 ![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E)
 ___
 #### About This Application:
-A simple single page interface that displays various movie information about Episodes 1-6
-with stunning image posters, character info, and plotline synopsis. 
+##### Chensofandog features a striking, dark aesthetic that captures the gritty and intense atmosphere of the anime. Dynamic animations and bold artwork draw you in, with high-quality images of your favorite characters set against vibrant backgrounds inspired by iconic scenes. Immerse yourself in the beautifully crafted universe of Denji and his devil-hunting escapades.
 
-##### Features
-* Feature
-* Feature
-* Feature
+#### Features
+* ##### An artfully crafted design layout that draws the user in both aesthetically and intuitively, <br>encouraging exploration and deeper interaction with the content.
+* ##### Interactive media portals that present disctinct relevancy to the site content which enhances user engagement, <br>by providing tailored experiences that meet the specific interests and needs of the audience.
+* ##### Designed with a casual yet respectful take on the original content, yet providing conceptual depth, <br>the presentation invites users to engage with the material in a relatable way while still honoring its core essence.
 ___
 #### Dependencies:
 [NodeJS](https://nodejs.org/en/docs/)<br>
