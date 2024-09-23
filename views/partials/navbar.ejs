@@ -36,33 +36,12 @@
   
   </nav>
   
-  <style> 
-  .tooltip-inner {
-      max-width: 150px;
-      width: 150px; 
-      background-color: #DFFF00; 
-      color: orange; 
-      font-family: 'Hubballi', cursive;
-      font-weight: bold; 
-  }
-
-.dropdown-menu {
-    background-color: orange !important;
-  } 
-
-.dropdown-menu .nav-item:hover {
-    background-color: #FFD580; 
-    opacity: 0.3;
-    filter: brightness(120%); 
- }
-  </style> 
-  
-  <script>
-  document.getElementById("logoclk").onclick = function() {
+<script>
+ document.getElementById("logoclk").onclick = function() {
      document.getElementById("img_frame").style.height = '92vh';
   };
   
   const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
   const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))
-  </script>
-  
+
+</script>
