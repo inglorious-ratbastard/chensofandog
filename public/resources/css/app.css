@@ -622,16 +622,31 @@ ul {
   display: inline-block;
   width: 131px; 
   margin: 0 12px 30px;
-  /* animation: scale 3s ease-in-out infinite alternate; */
+  animation: scale 3s ease-in-out infinite alternate; 
 }
 
-@keyframes scale {
-  0% {
-  }
-  
-  100% {
- 	 -webkit-transform: scale(1.2);
-  }
+  @keyframes horizontal-shaking {
+  0% { transform: translateX(0) }
+  25% { transform: translateX(5px) }
+  50% { transform: translateX(-5px) }
+  75% { transform: translateX(5px) }
+  100% { transform: translateX(0); transform: scale(1.2); }
+}
+
+.image-list-small li:hover{
+ animation: horizontal-shaking 1s infinite alternate; 
+  width: 131px; 
+}
+
+/** temporary image placeholders **/ 
+#pochita .image-list-small li > a{
+  background-image: url('../../pochita_img.png') !important;
+}
+#powerz .image-list-small li > a{
+  background-image: url('../../power_image.jpg') !important;
+}
+#denji .image-list-small li > a{
+  background-image: url('../../denji_img.jpg') !important;
 }
 
 .image-list-small li > a {
@@ -643,9 +658,9 @@ ul {
   height: 137px;
   margin: 0;
   padding: 0;
-  border: 1px solid #ffffff;
-  outline: 1px solid #d0d0d0;
-  box-shadow: 0 2px 1px #DDD; 
+  border: 1px solid inherit; /* #ffffff; */
+  outline: 1px solid inherit; /* #d0d0d0; */
+  box-shadow: 0 2px 1px inherit; /* #DDD; */
 }
 
 .image-list-small .details {
