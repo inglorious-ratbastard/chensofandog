@@ -1,4 +1,5 @@
 @import "bootstrap.min.css";
+@import url('https://fonts.googleapis.com/css2?family=Poor+Story&display=swap');
 
 html, body {
   background-color: white;
@@ -283,6 +284,7 @@ button:focus {
 
 #fujimoto {
   background-color: #FCF5E5 !important;
+  height: 100vh !important;
 }
 
 #anime {
@@ -519,15 +521,17 @@ img.rounded:hover {
 }
 .column-accordian > .column.flex > div > span {
   visibility: visible;
-  display: flex; 
-  font-size: 2vmin; 
-  line-height: 15px; 
-  margin: -40px 15px 0px 15px; 
-  height: 80px;
+  display: flex;
+  font-size: 35%;
+  overflow-x: inherit;  
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin: -10px 15px 0px 15px; 
+  height: 150px; 
 } 
 
 .column-accordian > .column.flex {
-  flex: 10;  
+ flex: 10;
 }
 .column-accordian > .column.flex > div {
   font-size: 5vmin;
@@ -704,8 +708,6 @@ ul {
   font-weight: 700;
 } 
 
-
-@import url('https://fonts.googleapis.com/css2?family=Poor+Story&display=swap');
 .td_error_ {
   font-family: 'Poor Story', system-ui; 
   font-size: 20px !important; 
