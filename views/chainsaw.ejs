@@ -12,7 +12,7 @@
 <script type="text/javascript" src="resources/js/app.js"></script> 
 
 </head>
-<body class="container-fluid" style="margin: 0px; padding: 0px; height: 100vh; width: 100vw; overflow-x: hidden; overflow-y: hidden;">
+<body id="main" class="container-fluid" style="margin: 0px; padding: 0px; height: 100vh; width: 100vw; overflow-x: hidden; overflow-y: hidden;">
 
 <%- include ('partials/navbar.ejs'); -%>
 
@@ -35,6 +35,21 @@
 </div>
 
 <%- include ('partials/footer.ejs'); -%>
+
+<script>
+    let vw = Math.max(document.documentElement.clientWidth || 0, window.innerWidth || 0);
+    if (vw < 1024) {
+        document.body.innerHTML = ` 
+            <div class="container-fluid text-center w-100 h-100 bg-black text-white sized">
+                <!-- <h1>Cannot View This Page</h1> -->
+                <h1 style="padding-top: 15rem !important; padding-bottom: 9.375rem; font-size: 40px; ">このページは表示できません</h1>
+                <img src="katana_man_sized.png">
+                <!-- <p>Your screen width is too small to view this page. <br>Please resize your window or switch to a larger device.</p> -->
+                <p style="margin-top: 15.125rem; font-size: 30px; ">画面の幅が小さすぎるため、このページを表示できません。 <br>ウィンドウのサイズを変更するか、より大きなデバイスに切り替えてください。</p>
+            </div>
+        `; 
+    } 
+</script>
 
 </body>
 </html>

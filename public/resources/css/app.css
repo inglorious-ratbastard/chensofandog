@@ -1,5 +1,6 @@
 @import "bootstrap.min.css";
 @import url('https://fonts.googleapis.com/css2?family=Poor+Story&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Yuji+Boku&display=swap');
 
 html, body {
   background-color: white;
@@ -907,5 +908,44 @@ ul {
   }
   91.1% {
     transform: translate3d(0,0,0);
+  }
+}
+
+.sized h1 { 
+  font-family: "Yuji Boku", serif; 
+}
+
+.sized p {
+  font-family: "Yuji Boku", serif; 
+}
+
+@media screen and (min-width: 501px) {
+  .sized {
+    height: 100vh !important;
+    margin-bottom: -15rem !important;
+    background-color: black;
+    color: white !important;
+  }
+  .sized h1 {
+    padding: -1.5rem !important;
+  }
+}
+
+@media (min-width: 768px) { 
+  .sized {
+    display: block;
+    overflow: auto;
+  }
+  .sized h1 {
+    position: relative; 
+    top: -100px; 
+  }
+  .sized img {
+    position: relative; 
+    top: -100px;
+  }
+  .sized p {
+    position: relative; 
+    top: -100px;
   }
 }
