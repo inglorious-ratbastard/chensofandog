@@ -38,15 +38,53 @@
 
 <script>
     let vw = Math.max(document.documentElement.clientWidth || 0, window.innerWidth || 0);
-    if (vw < 1024) {
-        document.body.innerHTML = ` 
-            <div class="container-fluid text-center w-100 h-100 bg-black text-white sized">
-                <!-- <h1>Cannot View This Page</h1> -->
-                <h1 style="padding-top: 15rem !important; padding-bottom: 9.375rem; font-size: 40px; ">このページは表示できません</h1>
-                <img src="katana_man_sized.png">
-                <!-- <p>Your screen width is too small to view this page. <br>Please resize your window or switch to a larger device.</p> -->
-                <p style="margin-top: 15.125rem; font-size: 30px; ">画面の幅が小さすぎるため、このページを表示できません。 <br>ウィンドウのサイズを変更するか、より大きなデバイスに切り替えてください。</p>
-            </div>
+        if (vw < 1024) {
+            document.body.innerHTML = ` 
+            <!DOCTYPE html>
+            <html lang="ja">
+            <head>
+                <meta charset="UTF-8">
+                <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                <title>ページ表示エラー</title>
+                <style>
+                    body {
+                        margin: 0;
+                        padding: 0;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        height: 100vh;
+                        background-color: black;
+                        color: white;
+                        text-align: center;
+                        font-family: Arial, sans-serif;
+                    }
+                    .container {
+                        max-width: 90%;
+                        padding: 20px;
+                        font-size: 0.8rem;
+                    }
+                    h1 { 
+                        font-family: "Yuji Boku", serif; 
+                        font-size: 5vw; 
+                    }
+
+                    img {
+                        max-width: 100%;
+                        height: auto;
+                        margin-top: 3rem;
+                        margin-bottom: 3rem;
+                    }
+                </style>
+            </head>
+            <body>
+                <div class="container">
+                    <h1>このページは表示できません</h1>
+                    <img src="katana_man_sized.png" alt="Error Image">
+                    <p>画面の幅が小さすぎるため、このページを表示できません。ウィンドウのサイズを変更するか、より大きなデバイスに切り替えてください。</p>
+                </div>
+            </body>
+            </html>
         `; 
     } 
 </script>
