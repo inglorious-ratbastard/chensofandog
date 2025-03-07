@@ -1,6 +1,7 @@
 @import "bootstrap.min.css";
 @import url('https://fonts.googleapis.com/css2?family=Poor+Story&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Yuji+Boku&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&display=swap');
 
 html, body {
   background-color: white;
@@ -9,7 +10,13 @@ html, body {
   font-weight: bold; 
 }
 
-.nav-link {
+#fujimoto, #anime, #manga, #pochita {
+  font-family: "EB Garamond", serif; 
+  font-weight: 500;
+  font-style: italic;
+}
+
+.nav-link, #break{
   color: orange !important; 
 } 
 
@@ -24,6 +31,9 @@ html, body {
 }
 
 .navbar-brand {
+  font-family: 'Hubballi', cursive; 
+  font-style: italic;
+  font-size: small; 
   padding-right: 50px;
 }
 
@@ -215,7 +225,8 @@ footer {
 
 .sidebar h1 {
   position: absolute;
-  font-size: 35px;
+  font-family: "EB Garamond", serif; 
+  font-size: 25px;
   font-style: italic;
   margin-bottom: 10px;
   margin-top: -30px;
@@ -452,6 +463,10 @@ img.rounded:hover {
   filter: brightness(110%); 
 }
 
+#anime .dropdown-toggle {
+  font-weight: 400;
+}
+
 .dropdown-item {
   font-weight: 600;  
 }
@@ -511,6 +526,9 @@ img.rounded:hover {
   font-size: 3vmin;
   transition: 200ms ease-in-out; 
 }
+.column-accordian > .column > div  > h6{
+  font-size: 2vmin; 
+} 
 
 .column-accordian > .column > div > span {
   display: none; 
@@ -523,7 +541,7 @@ img.rounded:hover {
 .column-accordian > .column.flex > div > span {
   visibility: visible;
   display: flex;
-  font-size: 35%;
+  font-size: 33%;
   overflow-x: inherit;  
   overflow: hidden;
   text-overflow: ellipsis;
@@ -608,6 +626,15 @@ ul {
 
 #gregg {
   margin-right: 150px; 
+}
+
+.popover {
+  max-width: 300px;
+  font-size: 16px; 
+}
+
+.popover-body {
+  font-size: 13px; 
 }
 
 #plcdd {
