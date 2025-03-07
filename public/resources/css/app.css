@@ -328,6 +328,10 @@ button:focus {
   text-align-last: left;
 }
 
+.persinfo h6 {
+  font-size: 14px; 
+}
+
 #fujimoto {
   background-color: #E8DCB8; 
 }
@@ -371,6 +375,7 @@ img.rounded:hover {
 #anime {
   opacity: 0.8; 
 }
+
  .card {
    width: 70vw;
    height: calc(9/16 * 70vw);
