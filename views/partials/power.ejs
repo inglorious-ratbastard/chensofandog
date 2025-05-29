@@ -47,3 +47,58 @@
    </div>
   </section>
   
+  <script>
+    (function updatePowerImagesWhenReady() {
+      const imageURLs = [
+        "https://static.zerochan.net/Power.1024.3391567.webp",
+        "https://static.zerochan.net/Power.1024.3281015.webp",
+        "https://static.zerochan.net/Power.1024.3496960.webp",
+        "https://static.zerochan.net/Power.1024.3837473.webp",
+        "https://static.zerochan.net/Power.1024.3884786.webp",
+        "https://static.zerochan.net/Power.1024.3932714.webp",
+        "https://static.zerochan.net/Power.1024.3992697.webp",
+        "https://static.zerochan.net/Power.1024.3969651.webp", 
+        "https://static.zerochan.net/Power.1024.3931925.webp",
+        "https://static.zerochan.net/Power.1024.3916311.webp",
+        "https://static.zerochan.net/Power.1024.3911187.webp",
+        "https://static.zerochan.net/Power.1024.3911177.webp",
+        "https://static.zerochan.net/Power.1024.3901830.webp",
+        "https://static.zerochan.net/Power.1024.3896517.webp", 
+        "https://static.zerochan.net/Power.1024.3887035.webp"
+      ];
+    
+      function shuffle(array) {
+        for (let i = array.length - 1; i > 0; i--) {
+          const j = Math.floor(Math.random() * (i + 1));
+          [array[i], array[j]] = [array[j], array[i]];
+        }
+        return array;
+      }
+    
+      function updateImages() {
+        const section = document.querySelector("#powerz");
+        if (!section) return false;
+    
+        const aTags = section.querySelectorAll(".image-list-small li a");
+        if (aTags.length === 0) return false;
+    
+        const shuffled = shuffle([...imageURLs]).slice(0, aTags.length);
+    
+        aTags.forEach((aTag, i) => {
+          aTag.style.setProperty("background-image", `url('${shuffled[i]}')`, "important");
+          aTag.style.setProperty("background-size", "100% 100%", "important");
+        });
+    
+        return true;
+      }
+    
+      if (!updateImages()) {
+        const observer = new MutationObserver(() => {
+          if (updateImages()) observer.disconnect();
+        });
+    
+        observer.observe(document.body, { childList: true, subtree: true });
+      }
+    })();
+    </script>
+    

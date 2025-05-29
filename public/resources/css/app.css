@@ -676,13 +676,14 @@ ul {
   width: 131px; 
 }
 
-/** temporary image placeholders **/ 
 #pochita .image-list-small li > a{
   background-image: url('../../pochita_img.png') !important;
 }
-#powerz .image-list-small li > a{
+
+#powerz .image-list-small li > a {
   background-image: url('../../power_image.jpg') !important;
 }
+
 #denji .image-list-small li > a{
   background-image: url('../../denji_img.jpg') !important;
 }

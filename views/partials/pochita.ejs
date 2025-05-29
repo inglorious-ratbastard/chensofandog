@@ -70,4 +70,60 @@ document.getElementById("gregg").addEventListener("mouseleave", function() {
  $('#popovitch').popover('dispose');
  $('#popovitch').popover({ placement : 'left', trigger: 'hover', content : '“Stop that! I am not a corn dog!”' }); 
 });
-</script>
+
+  (function updatePochitaImagesWhenReady() {
+    const imageURLs = [
+      "https://static.zerochan.net/Chainsaw.Man.1024.4423821.webp",
+      "https://static.zerochan.net/Chainsaw.Man.1024.4489072.webp",
+      "https://static.zerochan.net/Chainsaw.Man.1024.4423784.webp",
+      "https://static.zerochan.net/Chainsaw.Man.1024.4460443.webp",
+      "https://static.zerochan.net/Chainsaw.Man.1024.4023823.webp",
+      "https://static.zerochan.net/Chainsaw.Man.1024.4220462.webp",
+      "https://static.zerochan.net/Chainsaw.Man.1024.4021687.webp",
+      "https://static.zerochan.net/Chainsaw.Man.1024.4021663.webp",
+      "https://static.zerochan.net/Denji.1024.3971470.webp",
+      "https://static.zerochan.net/Chainsaw.Man.1024.3901836.webp",
+      "https://static.zerochan.net/Chainsaw.Man.1024.4024065.webp",
+      "https://static.zerochan.net/Chainsaw.Man.1024.3981323.webp",
+      "https://static.zerochan.net/Chainsaw.Man.1024.3848427.webp",
+      "https://static.zerochan.net/Chainsaw.Man.1024.3819183.webp",
+      "https://static.zerochan.net/Chainsaw.Man.1024.3860607.webp",
+      "https://static.zerochan.net/Chainsaw.Man.1024.3811844.webp",
+      "https://static.zerochan.net/Chainsaw.Man.1024.3802316.webp",
+      "https://static.zerochan.net/Chainsaw.Man.1024.3807287.webp"
+    ];
+  
+    function shuffle(array) {
+      for (let i = array.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [array[i], array[j]] = [array[j], array[i]];
+      }
+      return array;
+    }
+  
+    function updateImages() {
+      const section = document.querySelector("#pochita");
+      if (!section) return false;
+  
+      const aTags = section.querySelectorAll(".image-list-small li a");
+      if (aTags.length === 0) return false;
+  
+      const shuffled = shuffle([...imageURLs]).slice(0, aTags.length);
+  
+      aTags.forEach((aTag, i) => {
+        aTag.style.setProperty("background-image", `url('${shuffled[i]}')`, "important");
+        aTag.style.setProperty("background-size", "100% 100%", "important");
+      });
+  
+      return true;
+    }
+  
+    if (!updateImages()) {
+      const observer = new MutationObserver(() => {
+        if (updateImages()) observer.disconnect();
+      });
+  
+      observer.observe(document.body, { childList: true, subtree: true });
+    }
+  })();
+  </script>
