@@ -4,17 +4,21 @@
 @import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
 
+@import url('https://fonts.googleapis.com/css2?family=Special+Elite&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&display=swap');
+
 html, body {
   background-color: white;
   color: black;
-  font-family: 'Hubballi', cursive;
-  font-weight: bold; 
+  font-family: "Special Elite", system-ui;
+  font-size: 14px;
 }
 
-#fujimoto, #anime, #manga, #pochita {
-  font-family: "EB Garamond", serif; 
-  font-weight: 500;
+#fujimoto, #anime, #manga, #pochita { 
+  font-family: "Cormorant Garamond", serif;
+  font-weight: 600;
   font-style: italic;
+  font-size: 17px; 
 }
 
 .nav-link, #break{
@@ -32,9 +36,9 @@ html, body {
 }
 
 .navbar-brand {
-  font-family: 'Hubballi', cursive; 
+  font-family: "Cormorant Garamond", serif;
   font-style: italic;
-  font-size: small; 
+  font-size: 14px; 
   padding-right: 50px;
 }
 
@@ -53,7 +57,7 @@ background-color: orange !important;
 
 .dropdown-menu .nav-item:hover {
 background-color: #FFD580; 
-opacity: 0.3;
+opacity: 0.4;
 filter: brightness(120%); 
 }
 
@@ -322,11 +326,13 @@ button:focus {
 
 #sect-title {
   margin-top: -60px;
-  font-weight: bold; 
+  font-weight: bolder; 
+  font-size: 16px;
 }
 
 .persinfo {
   text-align-last: left;
+  font-weight: bolder;
 }
 
 .persinfo h6 {
@@ -337,36 +343,36 @@ button:focus {
   background-color: #E8DCB8; 
 }
 
-.rounded { 
+.rounded {
   height: 285px;
-  width: 285px; 
+  width: 285px;
   margin-left: 130px !important;
-  opacity: 0.6;
-  border: 1px solid black;
+  border-radius: 6px;
+  border: 2px solid #111;
+  opacity: 0.9; 
+  filter: grayscale(35%) contrast(110%) brightness(97%);
+  transition: all 0.6s ease;
+  box-shadow: 
+    0 10px 25px rgba(0, 0, 0, 0.6),
+    0 0 0 rgba(139, 0, 0, 0); 
 }
 
 img.rounded:hover {
-  transform: scale(1.1); 
-  animation: bloom ease-in-out .95s infinite; 
+  transform: scale(1.05);
+  filter: grayscale(0%) contrast(120%) brightness(100%);
+  box-shadow:
+    0 20px 40px rgba(0, 0, 0, 0.8),
+    0 0 25px rgba(139, 0, 0, 0.7);
+}
+
+img.rounded:hover {
+  animation: horrorPulse 2s infinite alternate;
+}
+
+@keyframes horrorPulse {
+  0% { transform: scale(1.05); }
+  100% { transform: scale(1.07); }
 } 
-  @keyframes bloom {
-    0% {
-      filter: contrast(100%);
-      box-shadow: 10px 10px 5px #ccc;
-    }
-    25% {
-      filter: contrast(130%);
-      box-shadow: 10px 10px 5px #ccc;
-    }
-    50% {
-      filter: contrast(160%);
-      box-shadow: 10px 10px 5px #ccc;
-    }
-    100% {
-      filter: contrast(100%);
-      box-shadow: 10px 10px 5px #ccc;
-    }
-  }
 
 #persbox {
   margin-top: -145px; 
@@ -462,7 +468,7 @@ img.rounded:hover {
 
 #dropbox .dropdown:hover>.dropdown-menu {
   display: block;
-  margin-left: 112px !important; 
+  margin-left: 122px !important; 
   margin-top: 0px; 
   background-color: #FFD580; 
   opacity: 1.5; 
@@ -473,14 +479,16 @@ img.rounded:hover {
   font-weight: 400;
 }
 
-.dropdown-item {
-  font-weight: 600;  
+#anime .dropdown-item {
+  font-weight: 800; 
+  font-size: 13px; 
 }
 
 #dropbox .dropdown-item:hover {
  background-color: #FFD580;
  opacity: 1.5; 
  filter: brightness(120%); 
+ font-weight: bolder;
 }
 
 .column-accordian {
@@ -496,7 +504,7 @@ img.rounded:hover {
 .column-accordian > .column {
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
   color: white;
-  font-weight: bold;
+  font-weight: bolder;
   cursor: pointer;
   text-align: center;
   text-transform: uppercase;
@@ -509,31 +517,46 @@ img.rounded:hover {
 }
 .column-accordian > .column:nth-child(1) {
   background: #E4D00A; 
+  color: black;
+  border: 1px solid black;  
 }
 .column-accordian > .column:nth-child(2) {
   background: #E3963E; 
+  color: black;
+  border: 1px solid black; 
 }
 .column-accordian > .column:nth-child(3) {
   background: #CC7722; 
+  color: black;
+  border: 1px solid black; 
 }
 .column-accordian > .column:nth-child(4) {
   background: rgba(191, 149, 64, .8);
+  color: black;
+  border: 1px solid black; 
 }
 .column-accordian > .column:nth-child(5) {
   background: #E3963E;
+  color: black;
+  border: 1px solid black; 
 }
 .column-accordian > .column:nth-child(6) {
   background: #FFC000; 
+  color: black;
+  border: 1px solid black; 
 }
 .column-accordian > .column:nth-child(7) {
   background: rgba(191, 149, 64, .8);
+  color: black;
+  border: 1px solid black; 
 }
 .column-accordian > .column > div {
   font-size: 3vmin;
   transition: 200ms ease-in-out; 
 }
 .column-accordian > .column > div  > h6{
-  font-size: 2vmin; 
+  font-size: 2.1vmin; 
+  font-weight: bolder !important;
 } 
 
 .column-accordian > .column > div > span {
@@ -542,12 +565,13 @@ img.rounded:hover {
 }
 .column-accordian > .column.flex > div {
   visibility: hidden; 
-  transition: 200ms ease-in-out; 
+  transition: 200ms ease-in-out;   
 }
 .column-accordian > .column.flex > div > span {
   visibility: visible;
   display: flex;
-  font-size: 33%;
+  font-size: 35%;
+  font-weight:bolder !important; 
   overflow-x: inherit;  
   overflow: hidden;
   text-overflow: ellipsis;
@@ -558,8 +582,9 @@ img.rounded:hover {
 .column-accordian > .column.flex {
  flex: 10;
 }
+
 .column-accordian > .column.flex > div {
-  font-size: 5vmin;
+  font-size: 5vmin; 
 }
 
 .wrapper {
@@ -622,6 +647,8 @@ ul {
 
    &:hover {
      background-color: darken(#FB6362, 9%);
+     text-decoration: underline;
+     color: red;
    }
  }
 } 
@@ -660,6 +687,7 @@ ul {
   display: inline-block;
   width: 131px; 
   margin: 0 12px 30px;
+  border: 1px solid black;
   animation: scale 3s ease-in-out infinite alternate; 
 }
 
@@ -672,7 +700,7 @@ ul {
 }
 
 .image-list-small li:hover{
- animation: horizontal-shaking 1s infinite alternate; 
+  animation: horizontal-shaking 1s infinite alternate; 
   width: 131px; 
 }
 
@@ -702,6 +730,10 @@ ul {
   box-shadow: 0 2px 1px inherit; 
 }
 
+.image-list-small li > a:hover {
+  border: 1px solid black;  
+} 
+
 .image-list-small .details {
   margin-top: 13px;
 }
@@ -729,7 +761,7 @@ ul {
 }
 
 .image-list-small:hover a {
-  opacity:0.2;
+  opacity:0.2;  
 }
 .image-list-small a:hover {
   height: 155px; 
