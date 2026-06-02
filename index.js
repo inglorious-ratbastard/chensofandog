@@ -3,7 +3,7 @@ const path = require('path');
 
 const app = express();
 
-const port = parseInt(process.env.PORT) || process.argv[3] || 8080;
+const port = parseInt(process.env.PORT) || process.argv[3] || 5000;
 
 app.use(express.static(path.join(__dirname, 'public')))
   .set('views', path.join(__dirname, 'views'))
@@ -21,6 +21,6 @@ app.get('*', (req, res) => {
   res.render('notFound');
 });
 
-app.listen(port, () => {
-  console.log(`Listening on http://localhost:${port}`);
+app.listen(port, '0.0.0.0', () => {
+  console.log(`Listening on http://0.0.0.0:${port}`);
 })
