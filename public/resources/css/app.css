@@ -976,3 +976,347 @@ ul {
     transform: translate3d(0,0,0);
   }
 }
+
+@media (max-width: 991.98px) {
+    #fujimoto .row {
+        font-size: clamp(18px, 1.2vw, 20px);
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        justify-content: center !important;
+        text-align: center !important;
+    }
+
+    #fujimoto .col-md-3,
+    #fujimoto .col-md-5 {
+        width: 100% !important;
+        max-width: 700px !important;
+        margin-left: auto !important;
+        margin-right: auto !important;
+        float: none !important;
+        text-align: center !important;
+    }
+
+    #fujimoto .offset-md-2,
+    #fujimoto .ml-5,
+    #fujimoto .ms-5 {
+        margin-left: 0 !important;
+    }
+
+    #fujimoto .col-md-5 {
+        margin-left: auto !important;
+        margin-right: auto !important;
+        margin-top: 6rem !important;
+        float: none !important;
+        text-align: center !important;
+    }
+
+    #fujimoto img {
+        display: block;
+        float: none !important;
+        margin: 2rem auto 1.5rem auto !important;
+        margin-top: 4rem !important;
+        width: 60vw;
+        max-width: 520px;
+        height: auto;
+    }
+
+    #fujimoto p,
+    #fujimoto h6 {
+        text-align: center !important;
+    }
+
+    #fujimoto h6 {
+      font-size: clamp(18px, 1.4vw, 22px);
+    }
+
+    #fujimoto p {
+      font-size: clamp(15px, 1vw, 18px);
+      line-height: 1.5;
+    }
+
+    #persbox {
+        width: 100%;
+        max-width: 400px;
+        margin: 2rem auto 0 auto !important;
+        text-align: center;
+    }
+
+    #persbox .persinfo,
+    #persbox .persinfo h6 {
+        float: none !important;
+        text-align: center !important;
+        margin: 0 auto; 
+    }
+  
+} 
+
+@media (max-width: 767.98px) {
+    #fujimoto {
+        padding: 1.5rem 1rem;
+    }
+
+    #fujimoto img {
+        width: 240px;
+    }
+
+    #fujimoto p {
+        padding: 0 1rem;
+    }
+
+    #fujimoto .row {
+      font-size: clamp(13px, 3.5vw, 16px);
+    }
+
+    #fujimoto p {
+      line-height: 1.4;
+    }
+
+    #persbox {
+        max-width: 300px;
+    }
+}
+
+@media (max-width: 991.98px) {
+    #anime .row {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #anime .col-md-4,
+    #anime .offset-md-2 {
+        width: 100%;
+        max-width: 100%;
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+        text-align: center;
+    }
+
+    #anime .card {
+        margin: 40px auto 0 auto !important;
+    }
+
+    #anime .dropdown {
+      margin-top: 3rem;
+      margin-bottom: 3rem; 
+    } 
+
+    #dropbox {
+        display: flex;
+        justify-content: center;
+        margin-top: 1rem;
+        margin-right: 8rem !important;
+    }
+
+    #dropbox {
+      text-align: center !important;
+    }
+
+    #dropbox .dropdown {
+      display: inline-block !important;
+    }
+
+    #anime .dropdown {
+      position: relative;
+      display: inline-block;
+    }
+
+    #anime .dropdown-menu {
+      left: -30% !important;
+      transform: translateX(-50%) !important;
+    }
+
+    #anime .float-md-end {
+        float: none !important;
+    }
+
+    #anime .vstack { 
+        align-items: center;
+        text-align: center;
+        margin-top: 4rem; 
+    } 
+
+    #anime .vstack .p-2 {
+        max-width: 650px;
+        margin: 0 auto;
+    }
+
+    #anime .vstack .p-2,
+    #anime .col-md-4.mt-5.offset-md-2 .p-2 {
+        font-size: clamp(20px, 1rem + 0.6vw, 24px);
+        width: min(70%, 650px);
+        margin: 0 auto;
+    }
+
+    #anime .col-md-4.mt-5 {
+        margin-top: 2rem !important;
+    }
+  
+    #anime iframe {
+        width: 100%;
+        max-width: 560px;
+        height: 315px;
+    }
+}
+
+@media (max-width: 991.98px) { 
+  .column-accordian {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+
+  .column-accordian .column {
+    width: 95%;
+    max-width: 700px;      
+    min-height: 100px;     
+    display: flex;         
+    align-items: stretch;
+  }
+
+  .column-accordian .column > div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+    padding: 1.25rem;
+  }
+  
+  .column-accordian span {
+    display: block;
+    flex-grow: 1;
+  }
+
+  .column-accordian .column h6 {
+    min-height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+  }
+
+  .column-accordian .column:last-child h6,
+  .column-accordian .column:last-child span {
+    font-size: 1.15rem !important;
+  }
+}
+
+@media (max-width: 576px) {
+  .column-accordian .column {
+    max-width: 100%;
+  }
+
+  #sect-title {
+    font-size: 1rem;
+  } 
+}
+
+@media (max-width: 992px) {
+  #gregg {
+    margin-left: -80px;
+  } 
+
+  #pochita .row {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #pochita .col[style*="margin-left"] {
+    margin-left: 0 !important;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  #pochita .image-list-small {
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    gap: 10px;
+    justify-content: center;
+    margin: 0 auto;
+    padding-left: 0;
+  }
+
+  #pochita .image-list-small li {
+    list-style: none;
+  } 
+
+  #pochita .image-list-small li a:hover {
+    height: 100% !important;
+  } 
+}
+
+
+@media (max-width: 992px) {
+  #gregg {
+    margin-left: -80px;
+    margin-bottom: 20rem;
+  } 
+
+  #powerz .row {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #powerz .col[style*="margin-left"] {
+    margin-left: 0 !important;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  #powerz .image-list-small {
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    gap: 10px;
+    justify-content: center;
+    margin: 0 auto;
+    padding-left: 0;
+  }
+
+  #powerz .image-list-small li {
+    list-style: none;
+  } 
+
+  #powerz .image-list-small li a:hover {
+    height: 100% !important;
+  } 
+}
+
+@media (max-width: 992px) {
+  #gregg {
+    margin-left: -80px;
+    margin-bottom: 20rem;
+  } 
+
+  #denji .row {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #denji .col[style*="margin-left"] {
+    margin-left: 0 !important;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  #denji .image-list-small {
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    gap: 10px;
+    justify-content: center;
+    margin: 0 auto;
+    padding-left: 0;
+  }
+
+  #denji .image-list-small li {
+    list-style: none;
+  } 
+
+  #denji .image-list-small li a:hover {
+    height: 100% !important;
+  } 
+}
