@@ -17,8 +17,8 @@ app.get('/chainsaw', (req, res) => {
   res.render('chainsaw');
 });
 
-app.get('*', (req, res) => {
-  res.render('notFound');
+app.get('/{*splat}', (req, res) => {
+  res.status(404).render('notFound');
 });
 
 app.listen(port, '0.0.0.0', () => {
